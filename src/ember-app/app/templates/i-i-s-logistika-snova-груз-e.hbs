@@ -1,0 +1,97 @@
+<h3 class="ui header">{{t "forms.i-i-s-logistika-snova-груз-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.кодГруза
+      class=(if (v-get validationModel "кодГруза" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.кодГруза-caption")
+      data-test-i-i-s-logistika-snova-груз-e-кодГруза=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "кодГруза" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.категорияГр
+      class=(if (v-get validationModel "категорияГр" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.категорияГр-caption")
+      data-test-i-i-s-logistika-snova-груз-e-категорияГр=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "категорияГр" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.ширина
+      class=(if (v-get validationModel "ширина" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.ширина-caption")
+      data-test-i-i-s-logistika-snova-груз-e-ширина=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "ширина" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.высота
+      class=(if (v-get validationModel "высота" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.высота-caption")
+      data-test-i-i-s-logistika-snova-груз-e-высота=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "высота" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.длина
+      class=(if (v-get validationModel "длина" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.длина-caption")
+      data-test-i-i-s-logistika-snova-груз-e-длина=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "длина" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.масса
+      class=(if (v-get validationModel "масса" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.масса-caption")
+      data-test-i-i-s-logistika-snova-груз-e-масса=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "масса" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.объем
+      class=(if (v-get validationModel "объем" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-груз-e.объем-caption")
+      data-test-i-i-s-logistika-snova-груз-e-объем=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "объем" "message")}}
+  </div>
+</form>

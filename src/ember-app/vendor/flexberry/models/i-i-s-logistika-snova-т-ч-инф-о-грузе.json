@@ -1,0 +1,78 @@
+﻿{
+  "name": "IISLogistika_snovaТЧИнфОГрузе",
+  "modelName": "i-i-s-logistika-snova-т-ч-инф-о-грузе",
+  "className": "ТЧИнфОГрузе",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "груз",
+      "relatedTo": "i-i-s-logistika-snova-груз",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "загрузКонтейн",
+      "relatedTo": "i-i-s-logistika-snova-загруз-контейн",
+      "inverse": "тЧИнфОГрузе"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧИнфОГрузеE",
+      "modelName": "i-i-s-logistika-snova-т-ч-инф-о-грузе",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "КодГруза",
+          "lookupValueField": "кодГруза",
+          "relationName": "Груз",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодГруза",
+              "caption": "Код груза",
+              "hidden": true,
+              "index": 1
+            },
+            {
+              "name": "категорияГр",
+              "caption": "Категория груза",
+              "hidden": false,
+              "index": 2
+            },
+            {
+              "name": "объем",
+              "caption": "Объем груза",
+              "hidden": false,
+              "index": 3
+            },
+            {
+              "name": "масса",
+              "caption": "Масса груза",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Код груза",
+          "name": "груз",
+          "relatedTo": "i-i-s-logistika-snova-груз",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,138 @@
+<h3 class="ui header">{{t "forms.i-i-s-logistika-snova-загрузка-баржи-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-загрузка-баржи-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.номерДокЗБ
+      class=(if (v-get validationModel "номерДокЗБ" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.номерДокЗБ-caption")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-номерДокЗБ=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "номерДокЗБ" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-загрузка-баржи-e.сотрудники-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.сотрудники
+      displayAttributeName="фИОСотруд"
+      autocomplete=true
+      relationName="сотрудники"
+      projection="СотрудникиL"
+      title=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.сотрудники-caption")
+      readonly=readonly
+      componentName="сотрудникиLookup"
+      class=(if (v-get validationModel "сотрудники" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-сотрудники=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "сотрудники" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-загрузка-баржи-e.баржи-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.баржи
+      displayAttributeName="номерБаржи"
+      autocomplete=true
+      relationName="баржи"
+      projection="БаржиL"
+      title=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.баржи-caption")
+      readonly=readonly
+      componentName="баржиLookup"
+      class=(if (v-get validationModel "баржи" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-баржи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "баржи" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.баржи.объемБаржи
+      class=(if (v-get validationModel.баржи "объемБаржи" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.баржи.объемБаржи-caption")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-баржи-объемБаржи=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.баржи "объемБаржи" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.объемБарСв
+      class=(if (v-get validationModel "объемБарСв" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.объемБарСв-caption")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-объемБарСв=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "объемБарСв" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.баржи.грузопод
+      class=(if (v-get validationModel.баржи "грузопод" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.баржи.грузопод-caption")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-баржи-грузопод=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.баржи "грузопод" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.остатокПоВесу
+      class=(if (v-get validationModel "остатокПоВесу" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-загрузка-баржи-e.остатокПоВесу-caption")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-остатокПоВесу=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "остатокПоВесу" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-загрузка-баржи-e.тЧИнфОКонт-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧИнфОКонтGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧИнфОКонт
+      content=model.тЧИнфОКонт
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧИнфОКонт" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-загрузка-баржи-e-тЧИнфОКонт=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧИнфОКонт" "message")}}
+  </div>
+</form>

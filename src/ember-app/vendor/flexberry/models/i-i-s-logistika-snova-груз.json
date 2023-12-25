@@ -1,0 +1,180 @@
+﻿{
+  "name": "IISLogistika_snovaГруз",
+  "modelName": "i-i-s-logistika-snova-груз",
+  "className": "Груз",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "высота",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "длина",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "категорияГр",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "кодГруза",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "масса",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "объем",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "ширина",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ГрузE",
+      "modelName": "i-i-s-logistika-snova-груз",
+      "attrs": [
+        {
+          "name": "кодГруза",
+          "caption": "Код груза",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "категорияГр",
+          "caption": "Категория груза",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "ширина",
+          "caption": "Ширина, м",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "высота",
+          "caption": "Высота, м",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "длина",
+          "caption": "Длина, м",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "масса",
+          "caption": "Масса, кг",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "объем",
+          "caption": "Объем, м^3",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ГрузL",
+      "modelName": "i-i-s-logistika-snova-груз",
+      "attrs": [
+        {
+          "name": "кодГруза",
+          "caption": "Код груза",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "категорияГр",
+          "caption": "Категория груза",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "ширина",
+          "caption": "Ширина, м",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "высота",
+          "caption": "Высота, м",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "длина",
+          "caption": "Длина, м",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "масса",
+          "caption": "Масса, кг",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "объем",
+          "caption": "Объем, м^3",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Баржи",
+      "projection": "БаржиL",
+      "detailModelName": null
+    },
+    {
+      "master": "загрузКонтейн",
+      "displayAttributeName": "номерДокЗагк",
+      "required": true,
+      "relationName": "ТЧИнфОКонт.ЗагрузКонтейн",
+      "projection": "ЗагрузКонтейнL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-инф-о-конт"
+    },
+    {
+      "master": "докумПостав",
+      "displayAttributeName": "номДокПостав",
+      "required": true,
+      "relationName": "ТЧИнфОКонт.ДокумПостав",
+      "projection": "ДокумПоставL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-инф-о-конт"
+    }
+  ],
+  "external": false,
+  "caption": "Загрузка баржи",
+  "name": "IISLogistika_snovaЗагрузкаБаржиE",
+  "className": "ЗагрузкаБаржиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-загрузка-баржи",
+      "modelProjection": "ЗагрузкаБаржиE"
+    }
+  ]
+}

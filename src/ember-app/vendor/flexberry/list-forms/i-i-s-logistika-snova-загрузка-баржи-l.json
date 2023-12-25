@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-загрузка-баржи-e",
+  "editForm": "i-i-s-logistika-snova-загрузка-баржи-e",
+  "external": false,
+  "caption": "Загрузка баржи",
+  "name": "IISLogistika_snovaЗагрузкаБаржиL",
+  "className": "ЗагрузкаБаржиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-загрузка-баржи",
+      "modelProjection": "ЗагрузкаБаржиL"
+    }
+  ]
+}

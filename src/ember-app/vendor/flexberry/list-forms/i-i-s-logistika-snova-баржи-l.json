@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-баржи-e",
+  "editForm": "i-i-s-logistika-snova-баржи-e",
+  "external": false,
+  "caption": "Баржи",
+  "name": "IISLogistika_snovaБаржиL",
+  "className": "БаржиL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-баржи",
+      "modelProjection": "БаржиL"
+    }
+  ]
+}

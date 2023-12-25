@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "ДокумПостав",
+      "projection": "ДокумПоставL",
+      "detailModelName": null
+    },
+    {
+      "master": "загрузКонтейн",
+      "displayAttributeName": "номерДокЗагк",
+      "required": true,
+      "relationName": "ТЧДостКонт.ЗагрузКонтейн",
+      "projection": "ЗагрузКонтейнL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-дост-кон"
+    },
+    {
+      "master": "груз",
+      "displayAttributeName": "кодГруза",
+      "required": true,
+      "relationName": "ТЧДостКонт.Груз",
+      "projection": "ГрузL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-дост-кон"
+    },
+    {
+      "master": "загрузКонтейн",
+      "displayAttributeName": "номерДокЗагк",
+      "required": true,
+      "relationName": "ТЧСвобМест.ЗагрузКонтейн",
+      "projection": "ЗагрузКонтейнL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-своб-мест"
+    }
+  ],
+  "external": false,
+  "caption": "Докум результ П",
+  "name": "IISLogistika_snovaДокумРезультПE",
+  "className": "ДокумРезультПE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-докум-результ-п",
+      "modelProjection": "ДокумРезультПE"
+    }
+  ]
+}

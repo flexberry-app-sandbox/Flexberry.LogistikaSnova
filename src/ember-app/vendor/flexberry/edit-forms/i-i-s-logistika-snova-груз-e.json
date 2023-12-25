@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Груз",
+  "name": "IISLogistika_snovaГрузE",
+  "className": "ГрузE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-груз",
+      "modelProjection": "ГрузE"
+    }
+  ]
+}

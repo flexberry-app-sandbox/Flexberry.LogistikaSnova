@@ -1,0 +1,100 @@
+﻿{
+  "name": "IISLogistika_snovaТЧДостКон",
+  "modelName": "i-i-s-logistika-snova-т-ч-дост-кон",
+  "className": "ТЧДостКон",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "груз",
+      "relatedTo": "i-i-s-logistika-snova-груз",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "загрузКонтейн",
+      "relatedTo": "i-i-s-logistika-snova-загруз-контейн",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "докумРезультП",
+      "relatedTo": "i-i-s-logistika-snova-докум-результ-п",
+      "inverse": "тЧДостКонт"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧДостКонE",
+      "modelName": "i-i-s-logistika-snova-т-ч-дост-кон",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерДокЗагк",
+          "lookupValueField": "номерДокЗагк",
+          "relationName": "ЗагрузКонтейн",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерДокЗагк",
+              "caption": "Номер документа загрузки контейнеров",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Номер документа загрузки контейнеров",
+          "name": "загрузКонтейн",
+          "relatedTo": "i-i-s-logistika-snova-загруз-контейн",
+          "inverse": null
+        },
+        {
+          "lookupValue": "КодГруза",
+          "lookupValueField": "кодГруза",
+          "relationName": "Груз",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "кодГруза",
+              "caption": "Код груза",
+              "hidden": true,
+              "index": 3
+            },
+            {
+              "name": "категорияГр",
+              "caption": "Категория поставленного груза ",
+              "hidden": false,
+              "index": 4
+            },
+            {
+              "name": "объем",
+              "caption": "Объем поставленного груза",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Код груза",
+          "name": "груз",
+          "relatedTo": "i-i-s-logistika-snova-груз",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

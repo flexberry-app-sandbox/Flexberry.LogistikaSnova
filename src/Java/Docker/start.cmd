@@ -1,0 +1,1 @@
+docker-compose -p logistika_snova-java up -d

@@ -1,0 +1,115 @@
+<h3 class="ui header">{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.дата-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationModel "дата" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-дата=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "дата" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.датаПриб-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.датаПриб
+      class=(if (v-get validationModel "датаПриб" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-датаПриб=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "датаПриб" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.докумПостав-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.докумПостав
+      displayAttributeName="номДокПостав"
+      autocomplete=true
+      relationName="докумПостав"
+      projection="ДокумПоставL"
+      title=(t "forms.i-i-s-logistika-snova-докум-результ-п-e.докумПостав-caption")
+      readonly=readonly
+      componentName="докумПоставLookup"
+      class=(if (v-get validationModel "докумПостав" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-докумПостав=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "докумПостав" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.докумПостав.клиенты.заказчик
+      class=(if (v-get validationModel.докумПостав.клиенты "заказчик" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-докум-результ-п-e.докумПостав.клиенты.заказчик-caption")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-докумПостав-клиенты-заказчик=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.докумПостав.клиенты "заказчик" "message")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.докумПостав.клиенты.адресПоставки
+      class=(if (v-get validationModel.докумПостав.клиенты "адресПоставки" "isInvalid") "error")
+      label=(t "forms.i-i-s-logistika-snova-докум-результ-п-e.докумПостав.клиенты.адресПоставки-caption")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-докумПостав-клиенты-адресПоставки=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel.докумПостав.клиенты "адресПоставки" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.тЧДостКонт-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧДостКонтGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧДостКонт
+      content=model.тЧДостКонт
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧДостКонт" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-тЧДостКонт=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧДостКонт" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-logistika-snova-докум-результ-п-e.тЧСвобМест-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="тЧСвобМестGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.тЧСвобМест
+      content=model.тЧСвобМест
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationModel "тЧСвобМест" "isInvalid") "error")
+      data-test-i-i-s-logistika-snova-докум-результ-п-e-тЧСвобМест=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "тЧСвобМест" "message")}}
+  </div>
+</form>

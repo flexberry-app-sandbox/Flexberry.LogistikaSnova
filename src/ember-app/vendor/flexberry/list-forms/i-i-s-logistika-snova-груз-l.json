@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-груз-e",
+  "editForm": "i-i-s-logistika-snova-груз-e",
+  "external": false,
+  "caption": "Груз",
+  "name": "IISLogistika_snovaГрузL",
+  "className": "ГрузL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-груз",
+      "modelProjection": "ГрузL"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistencehttp://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="Olingo4PG">
+        <class>Logistika_snova.model.Sotrudniki</class>
+        <class>Logistika_snova.model.Barzhi</class>
+        <class>Logistika_snova.model.Kontejnery</class>
+        <class>Logistika_snova.model.TCHDostKon</class>
+        <class>Logistika_snova.model.Organizaciya</class>
+        <class>Logistika_snova.model.TCHRaspisanie</class>
+        <class>Logistika_snova.model.ZagruzKontejn</class>
+        <class>Logistika_snova.model.TCHInfOKont</class>
+        <class>Logistika_snova.model.TCHInfOZak</class>
+        <class>Logistika_snova.model.TCHSvobMest</class>
+        <class>Logistika_snova.model.ZagruzkaBarzhi</class>
+        <class>Logistika_snova.model.TCHInfOGruze</class>
+        <class>Logistika_snova.model.Gruz</class>
+        <class>Logistika_snova.model.Klienty</class>
+        <class>Logistika_snova.model.DokumRezultP</class>
+        <class>Logistika_snova.model.DokumPostav</class>
+        <class>Logistika_snova.model.FlexberryAdvLimit</class>
+        <class>Logistika_snova.model.NewPlatformFlexberryFlexberryUserSetting</class>
+        <class>Logistika_snova.model.NewPlatformFlexberryServicesLock</class>
+        <class>Logistika_snova.model.IISCaseberryLoggingObjectsApplicationLog</class>
+
+    </persistence-unit>
+</persistence>

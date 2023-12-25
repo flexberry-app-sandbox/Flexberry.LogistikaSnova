@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Контейнеры",
+  "name": "IISLogistika_snovaКонтейнерыE",
+  "className": "КонтейнерыE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-контейнеры",
+      "modelProjection": "КонтейнерыE"
+    }
+  ]
+}

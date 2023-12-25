@@ -1,0 +1,54 @@
+﻿{
+  "name": "IISLogistika_snovaСотрудники",
+  "modelName": "i-i-s-logistika-snova-сотрудники",
+  "className": "Сотрудники",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "фИОСотруд",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "СотрудникиE",
+      "modelName": "i-i-s-logistika-snova-сотрудники",
+      "attrs": [
+        {
+          "name": "фИОСотруд",
+          "caption": "ФИО Сотрудника",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "СотрудникиL",
+      "modelName": "i-i-s-logistika-snova-сотрудники",
+      "attrs": [
+        {
+          "name": "фИОСотруд",
+          "caption": "ФИО Сотрудника",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,209 @@
+﻿{
+  "name": "IISLogistika_snovaДокумРезультП",
+  "modelName": "i-i-s-logistika-snova-докум-результ-п",
+  "className": "ДокумРезультП",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "датаПриб",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "докумПостав",
+      "relatedTo": "i-i-s-logistika-snova-докум-постав",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "тЧДостКонт",
+      "relatedTo": "i-i-s-logistika-snova-т-ч-дост-кон",
+      "inverse": "докумРезультП"
+    },
+    {
+      "name": "тЧСвобМест",
+      "relatedTo": "i-i-s-logistika-snova-т-ч-своб-мест",
+      "inverse": "докумРезультП"
+    }
+  ],
+  "projections": [
+    {
+      "name": "ДокумРезультПE",
+      "modelName": "i-i-s-logistika-snova-докум-результ-п",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата документа результатов поставки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаПриб",
+          "caption": "Дата прибытия",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомДокПостав",
+          "lookupValueField": "номДокПостав",
+          "relationName": "ДокумПостав",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "ДокумПостав.Клиенты",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "заказчик",
+                  "caption": "Наименование заказчика",
+                  "hidden": false,
+                  "index": 4
+                },
+                {
+                  "name": "адресПоставки",
+                  "caption": "Адрес поставки",
+                  "hidden": false,
+                  "index": 5
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "клиенты",
+              "relatedTo": "i-i-s-logistika-snova-клиенты",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номДокПостав",
+              "caption": "Номер документа поставки",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Номер документа поставки",
+          "name": "докумПостав",
+          "relatedTo": "i-i-s-logistika-snova-докум-постав",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "ТЧДостКонE",
+          "caption": "Доставленные контейнеры",
+          "name": "тЧДостКонт",
+          "relatedTo": "i-i-s-logistika-snova-т-ч-дост-кон",
+          "inverse": null
+        },
+        {
+          "projectionName": "ТЧСвобМестE",
+          "caption": "Свободное место в контейнерах",
+          "name": "тЧСвобМест",
+          "relatedTo": "i-i-s-logistika-snova-т-ч-своб-мест",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "ДокумРезультПL",
+      "modelName": "i-i-s-logistika-snova-докум-результ-п",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата документа результатов поставки",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "датаПриб",
+          "caption": "Дата прибытия",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "ДокумПостав",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "ДокумПостав.Клиенты",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "заказчик",
+                  "caption": "Наименование заказчика",
+                  "hidden": false,
+                  "index": 3
+                },
+                {
+                  "name": "адресПоставки",
+                  "caption": "Адрес поставки",
+                  "hidden": false,
+                  "index": 4
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "клиенты",
+              "relatedTo": "i-i-s-logistika-snova-клиенты",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номДокПостав",
+              "caption": "Номер документа поставки",
+              "hidden": false,
+              "index": 2
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Номер документа поставки",
+          "name": "докумПостав",
+          "relatedTo": "i-i-s-logistika-snova-докум-постав",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

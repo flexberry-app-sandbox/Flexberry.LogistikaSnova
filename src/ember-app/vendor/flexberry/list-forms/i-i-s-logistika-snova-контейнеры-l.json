@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-контейнеры-e",
+  "editForm": "i-i-s-logistika-snova-контейнеры-e",
+  "external": false,
+  "caption": "Контейнеры",
+  "name": "IISLogistika_snovaКонтейнерыL",
+  "className": "КонтейнерыL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-контейнеры",
+      "modelProjection": "КонтейнерыL"
+    }
+  ]
+}

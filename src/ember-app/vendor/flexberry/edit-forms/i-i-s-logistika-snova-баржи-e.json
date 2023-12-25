@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Баржи",
+  "name": "IISLogistika_snovaБаржиE",
+  "className": "БаржиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-баржи",
+      "modelProjection": "БаржиE"
+    }
+  ]
+}

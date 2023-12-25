@@ -1,0 +1,63 @@
+﻿{
+  "name": "IISLogistika_snovaТЧРасписание",
+  "modelName": "i-i-s-logistika-snova-т-ч-расписание",
+  "className": "ТЧРасписание",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "датаПрибыт",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "пунктПриб",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "баржи",
+      "relatedTo": "i-i-s-logistika-snova-баржи",
+      "inverse": "тЧРасписание"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧРасписаниеE",
+      "modelName": "i-i-s-logistika-snova-т-ч-расписание",
+      "attrs": [
+        {
+          "name": "датаПрибыт",
+          "caption": "Дата прибытия баржи",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "пунктПриб",
+          "caption": "Пункт прибытия баржи",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-докум-результ-п-e",
+  "editForm": "i-i-s-logistika-snova-докум-результ-п-e",
+  "external": false,
+  "caption": "Докум результ П",
+  "name": "IISLogistika_snovaДокумРезультПL",
+  "className": "ДокумРезультПL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-докум-результ-п",
+      "modelProjection": "ДокумРезультПL"
+    }
+  ]
+}

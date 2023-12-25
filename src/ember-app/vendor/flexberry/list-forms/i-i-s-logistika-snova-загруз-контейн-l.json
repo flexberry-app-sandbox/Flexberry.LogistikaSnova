@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-logistika-snova-загруз-контейн-e",
+  "editForm": "i-i-s-logistika-snova-загруз-контейн-e",
+  "external": false,
+  "caption": "Загруз контейн",
+  "name": "IISLogistika_snovaЗагрузКонтейнL",
+  "className": "ЗагрузКонтейнL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-загруз-контейн",
+      "modelProjection": "ЗагрузКонтейнL"
+    }
+  ]
+}

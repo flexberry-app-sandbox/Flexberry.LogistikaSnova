@@ -1,0 +1,105 @@
+﻿{
+  "name": "IISLogistika_snovaТЧСвобМест",
+  "modelName": "i-i-s-logistika-snova-т-ч-своб-мест",
+  "className": "ТЧСвобМест",
+  "nameSpace": "IIS.Logistika_snova",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "свобОбъем",
+      "type": "decimal",
+      "flexberryType": "double",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "загрузКонтейн",
+      "relatedTo": "i-i-s-logistika-snova-загруз-контейн",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "докумРезультП",
+      "relatedTo": "i-i-s-logistika-snova-докум-результ-п",
+      "inverse": "тЧСвобМест"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ТЧСвобМестE",
+      "modelName": "i-i-s-logistika-snova-т-ч-своб-мест",
+      "attrs": [
+        {
+          "name": "свобОбъем",
+          "caption": "Освободившийся объем",
+          "hidden": false,
+          "index": 4
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "НомерДокЗагк",
+          "lookupValueField": "номерДокЗагк",
+          "relationName": "ЗагрузКонтейн",
+          "belongsTo": [
+            {
+              "lookupValue": null,
+              "lookupValueField": null,
+              "relationName": "ЗагрузКонтейн.Контейнеры",
+              "belongsTo": [],
+              "hidden": false,
+              "attrs": [
+                {
+                  "name": "номерКонтей",
+                  "caption": "Номер контейнера",
+                  "hidden": false,
+                  "index": 2
+                },
+                {
+                  "name": "объем",
+                  "caption": "Объем контейнера",
+                  "hidden": false,
+                  "index": 3
+                }
+              ],
+              "index": -1,
+              "type": null,
+              "caption": "",
+              "name": "контейнеры",
+              "relatedTo": "i-i-s-logistika-snova-контейнеры",
+              "inverse": null
+            }
+          ],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "номерДокЗагк",
+              "caption": "Номер документа загрузки контейнеров",
+              "hidden": true,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "standard",
+          "caption": "Номер документа загрузки контейнеров",
+          "name": "загрузКонтейн",
+          "relatedTo": "i-i-s-logistika-snova-загруз-контейн",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

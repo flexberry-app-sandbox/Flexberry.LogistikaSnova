@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Сотрудники",
+      "projection": "СотрудникиL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Контейнеры",
+      "projection": "КонтейнерыL",
+      "detailModelName": null
+    },
+    {
+      "master": "груз",
+      "displayAttributeName": "кодГруза",
+      "required": true,
+      "relationName": "ТЧИнфОГрузе.Груз",
+      "projection": "ГрузL",
+      "detailModelName": "i-i-s-logistika-snova-т-ч-инф-о-грузе"
+    }
+  ],
+  "external": false,
+  "caption": "Загруз контейн",
+  "name": "IISLogistika_snovaЗагрузКонтейнE",
+  "className": "ЗагрузКонтейнE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-logistika-snova-загруз-контейн",
+      "modelProjection": "ЗагрузКонтейнE"
+    }
+  ]
+}
