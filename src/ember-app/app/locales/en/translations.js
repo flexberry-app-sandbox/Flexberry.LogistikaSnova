@@ -61,7 +61,7 @@ $.extend(true, translations, {
     'i-i-s-logistika-snova-т-ч-своб-мест': IISLogistika_snovaТЧСвобМестModel
   },
 
-  'application-name': 'Logistika',
+  'application-name': 'Логистика',
 
   forms: {
     loading: {
@@ -100,7 +100,7 @@ $.extend(true, translations, {
       },
 
       footer: {
-        'application-name': 'Logistika',
+        'application-name': 'Логистика',
         'application-version': {
           caption: 'Addon version {{version}}',
           title: 'It is version of ember-flexberry addon, which uses in this dummy application ' +
@@ -111,8 +111,8 @@ $.extend(true, translations, {
 
       sitemap: {
         'application-name': {
-          caption: 'Logistika',
-          title: 'Logistika'
+          caption: 'Логистика',
+          title: 'Логистика'
         },
         'application-version': {
           caption: 'Addon version {{version}}',
@@ -123,6 +123,58 @@ $.extend(true, translations, {
         index: {
           caption: 'Home',
           title: ''
+        },
+        'данные-об-организации-и-ее-компонентах': {
+          caption: 'Данные об организации и ее компонентах',
+          title: 'Данные об организации и ее компонентах',
+          'i-i-s-logistika-snova-баржи-l': {
+            caption: 'Баржи',
+            title: 'Баржи'
+          },
+          'i-i-s-logistika-snova-сотрудники-l': {
+            caption: 'Сотрудники',
+            title: 'Сотрудники'
+          },
+          'i-i-s-logistika-snova-организация-l': {
+            caption: 'Организация',
+            title: 'Организация'
+          },
+          'i-i-s-logistika-snova-контейнеры-l': {
+            caption: 'Контейнеры',
+            title: 'Контейнеры'
+          },
+          'i-i-s-logistika-snova-клиенты-l': {
+            caption: 'Клиенты',
+            title: 'Клиенты'
+          }
+        },
+        документация: {
+          caption: 'Документация',
+          title: 'Документация',
+          'i-i-s-logistika-snova-докум-постав-l': {
+            caption: 'Документ поставки',
+            title: 'Документ поставки'
+          },
+          'i-i-s-logistika-snova-загруз-контейн-l': {
+            caption: 'Загрузка контейнера',
+            title: 'Загрузка контейнера'
+          },
+          'i-i-s-logistika-snova-загрузка-баржи-l': {
+            caption: 'Загрузка баржи',
+            title: 'Загрузка баржи'
+          },
+          'i-i-s-logistika-snova-докум-результ-п-l': {
+            caption: 'Документ результатов поставки',
+            title: 'Документ результатов поставки'
+          }
+        },
+        номенклатура: {
+          caption: 'Номенклатура',
+          title: 'Номенклатура',
+          'i-i-s-logistika-snova-груз-l': {
+            caption: 'Груз',
+            title: 'Груз'
+          }
         },
         logistika: {
           caption: 'Logistika',

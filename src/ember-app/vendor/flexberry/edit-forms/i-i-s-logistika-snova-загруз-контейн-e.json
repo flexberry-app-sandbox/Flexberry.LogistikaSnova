@@ -26,7 +26,7 @@
     }
   ],
   "external": false,
-  "caption": "Загруз контейн",
+  "caption": "Загрузка контейнера",
   "name": "IISLogistika_snovaЗагрузКонтейнE",
   "className": "ЗагрузКонтейнE",
   "attrs": [],

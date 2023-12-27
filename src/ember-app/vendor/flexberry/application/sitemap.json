@@ -1,81 +1,97 @@
 ﻿{
-  "applicationCaption": "Logistika",
+  "applicationCaption": "Логистика",
   "applicationTitle": "Logistika",
   "items": [
     {
       "link": null,
-      "menuName": "logistika",
-      "caption": "Logistika",
-      "title": "Logistika",
+      "menuName": "данные-об-организации-и-ее-компонентах",
+      "caption": "Данные об организации и ее компонентах",
+      "title": "Данные об организации и ее компонентах",
       "children": [
         {
-          "link": "i-i-s-logistika-snova-загруз-контейн-l",
+          "link": "i-i-s-logistika-snova-баржи-l",
           "menuName": null,
-          "caption": "Загруз контейн",
-          "title": "",
-          "children": null
-        },
-        {
-          "link": "i-i-s-logistika-snova-докум-постав-l",
-          "menuName": null,
-          "caption": "Докум постав",
-          "title": "",
-          "children": null
-        },
-        {
-          "link": "i-i-s-logistika-snova-докум-результ-п-l",
-          "menuName": null,
-          "caption": "Докум результ П",
-          "title": "",
-          "children": null
-        },
-        {
-          "link": "i-i-s-logistika-snova-организация-l",
-          "menuName": null,
-          "caption": "Организация",
-          "title": "",
-          "children": null
-        },
-        {
-          "link": "i-i-s-logistika-snova-клиенты-l",
-          "menuName": null,
-          "caption": "Клиенты",
-          "title": "",
+          "caption": "Баржи",
+          "title": "Баржи",
           "children": null
         },
         {
           "link": "i-i-s-logistika-snova-сотрудники-l",
           "menuName": null,
           "caption": "Сотрудники",
-          "title": "",
+          "title": "Сотрудники",
           "children": null
         },
         {
-          "link": "i-i-s-logistika-snova-баржи-l",
+          "link": "i-i-s-logistika-snova-организация-l",
           "menuName": null,
-          "caption": "Баржи",
-          "title": "",
-          "children": null
-        },
-        {
-          "link": "i-i-s-logistika-snova-загрузка-баржи-l",
-          "menuName": null,
-          "caption": "Загрузка баржи",
-          "title": "",
+          "caption": "Организация",
+          "title": "Организация",
           "children": null
         },
         {
           "link": "i-i-s-logistika-snova-контейнеры-l",
           "menuName": null,
           "caption": "Контейнеры",
-          "title": "",
+          "title": "Контейнеры",
           "children": null
         },
+        {
+          "link": "i-i-s-logistika-snova-клиенты-l",
+          "menuName": null,
+          "caption": "Клиенты",
+          "title": "Клиенты",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "документация",
+      "caption": "Документация",
+      "title": "Документация",
+      "children": [
+        {
+          "link": "i-i-s-logistika-snova-докум-постав-l",
+          "menuName": null,
+          "caption": "Документ поставки",
+          "title": "Документ поставки",
+          "children": null
+        },
+        {
+          "link": "i-i-s-logistika-snova-загруз-контейн-l",
+          "menuName": null,
+          "caption": "Загрузка контейнера",
+          "title": "Загрузка контейнера",
+          "children": null
+        },
+        {
+          "link": "i-i-s-logistika-snova-загрузка-баржи-l",
+          "menuName": null,
+          "caption": "Загрузка баржи",
+          "title": "Загрузка баржи",
+          "children": null
+        },
+        {
+          "link": "i-i-s-logistika-snova-докум-результ-п-l",
+          "menuName": null,
+          "caption": "Документ результатов поставки",
+          "title": "Документ результатов поставки",
+          "children": null
+        }
+      ]
+    },
+    {
+      "link": null,
+      "menuName": "номенклатура",
+      "caption": "Номенклатура",
+      "title": "Номенклатура",
+      "children": [
         {
           "link": "i-i-s-logistika-snova-груз-l",
           "menuName": null,
           "caption": "Груз",
-          "title": "",
+          "title": "Груз",
           "children": null
         }
       ]
